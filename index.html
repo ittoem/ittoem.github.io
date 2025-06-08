@@ -16,12 +16,11 @@
       background-image: url('bgimg.png');
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: left center; /* Fokus di kiri */
       min-height: 100vh;
-      padding-bottom: 70px; /* untuk bottom bar */
+      padding-bottom: 70px;
     }
 
-    /* Peringatan */
     .alert {
       background-color: #fff3cd;
       color: #856404;
@@ -37,7 +36,6 @@
       text-decoration: underline;
     }
 
-    /* Navbar */
     .navbar {
       background-color: #d10000;
       display: flex;
@@ -70,7 +68,6 @@
       color: white;
     }
 
-    /* Bottom Bar */
     .bottom-bar {
       background-color: #d10000;
       color: white;
@@ -85,8 +82,34 @@
       z-index: 999;
     }
 
-    /* Responsive */
+    /* Konten Tengah */
+    .main-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 5em 1em;
+    }
+
+    .tagline {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .tagline span:first-child {
+      color: red;
+    }
+
+    .tagline span:last-child {
+      color: white;
+    }
+
+    /* Responsif */
     @media (max-width: 600px) {
+      body {
+        background-position: left center;
+      }
+
       .navbar {
         flex-direction: column;
         align-items: center;
@@ -98,12 +121,12 @@
         margin-top: 0.6em;
       }
 
-      .nav-links a {
-        font-size: 1em;
-      }
-
       .logo {
         margin-bottom: 0.4em;
+      }
+
+      .tagline {
+        font-size: 1.5em;
       }
     }
   </style>
@@ -128,10 +151,11 @@
     </div>
   </div>
 
-  <!-- Konten -->
-  <div style="padding: 1.5em; color: white;">
-    <h2>Selamat Datang di JRR</h2>
-    <p>Informasi dan update terbaru akan tersedia di sini.</p>
+  <!-- Konten Utama -->
+  <div class="main-content">
+    <div class="tagline">
+      <span>Melayani</span> <span>anda sepenuh hati</span>
+    </div>
   </div>
 
   <!-- Bottom Bar -->
