@@ -1,131 +1,188 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Java Railway Roblox</title>
+  <meta charset="UTF-8">
+  <title>JRR Commuter</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: sans-serif;
-      background: url('bgimg.png') no-repeat center center;
-      background-size: cover;
-      height: 100vh;
-      position: relative;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    @media (max-width: 768px) {
-      body {
-        background-position: right center;
-      }
+    body {
+      font-family: Arial, sans-serif;
     }
 
-    .update-banner {
-      background-color: #fff3cd;
+    .top-alert {
+      background: #fff3cd;
       color: #856404;
-      padding: 1em;
+      padding: 10px;
       text-align: center;
-      font-size: 0.95em;
-      font-weight: 500;
-      border-bottom: 2px solid #d39e00;
+      font-size: 14px;
     }
 
-    .update-banner a {
+    .top-alert a {
       font-weight: bold;
-      color: #4a3c00;
+      color: #856404;
       text-decoration: underline;
     }
 
     .navbar {
-      background-color: #d10000;
+      background-color: #d60000;
+      padding: 15px 30px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 1em 2em;
-    }
-
-    .navbar .logo img {
-      height: 40px;
-    }
-
-    .navbar .nav-links {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .navbar .nav-links a {
-      color: rgba(255, 255, 255, 0.85);
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    .navbar .nav-links a:hover {
+      justify-content: space-between;
       color: white;
     }
 
-    /* Tulisan di atas gambar */
-    .overlay-text {
-      position: absolute;
-      z-index: 10;
+    .navbar .logo {
       font-weight: bold;
+      font-size: 24px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .hero {
+      display: flex;
+      height: calc(100vh - 110px); /* 100vh minus navbar + alert height */
+    }
+
+    .hero-image {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* agar gambar memenuhi area */
+    }
+
+    .hero-content {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: white;
+    }
+
+    .intro-text h2 {
+      color: #660000;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .intro-text p {
+      color: #660000;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #d60000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .slogan {
+      margin-top: 40px;
       color: red;
     }
 
-    .text-melayani {
-      top: 30%;
-      right: 12%;
-      font-size: 2.5em;
+    .slogan h1 {
+      font-size: 36px;
+      margin: 0;
     }
 
-    .text-hati {
-      top: 47%;
-      right: 6%;
-      font-size: 1.5em;
+    .slogan h2 {
+      font-size: 28px;
+      margin: 0;
     }
 
-    .bottom-bar {
-      background-color: #d10000;
+    .slogan h3 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .footer {
+      background-color: #d60000;
       color: white;
+      padding: 10px;
       text-align: center;
-      padding: 1em;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      font-size: 0.9em;
-      font-weight: bold;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .hero-image img {
+        height: auto;
+      }
+
+      .hero-content {
+        padding: 20px;
+      }
+
+      .slogan {
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Peringatan -->
-  <div class="update-banner">
-    ⚠️ Java Railway Roblox sedang mengalami pembaruan. Bergabunglah dengan komunitas kami di 
-    <a href="link.html">server Discord</a> untuk mengetahui perkembangannya.
+  <div class="top-alert">
+    ⚠️ Java Railway Roblox sedang mengalami pembaruan. Bergabunglah dengan komunitas kami di
+    <a href="#">server Discord</a> untuk mengetahui perkembangannya.
   </div>
 
-  <!-- Navbar -->
   <div class="navbar">
-    <div class="logo">
-          <img src="jrr/jrrlogo.png" alt="Logo JRR">
-    </div>
-    <div class="nav-links">
-      <a href="sarana.html">Sarana</a>
-      <a href="link.html">Link</a>
-      <a href="#jadwal">Rute</a>
+    <div class="logo">JRR</div>
+    <div>
+      <a href="#">Sarana</a>
+      <a href="#">Link</a>
+      <a href="#">Rute</a>
     </div>
   </div>
 
-  <!-- Tulisan sesuai posisi di gambar -->
-  <div class="overlay-text text-melayani">Melayani</div>
-  <div class="overlay-text text-hati">Hati</div>
+  <div class="hero">
+    <div class="hero-image">
+      <img src="bgimg1.png" alt="Kereta JRR">
+    </div>
+    <div class="hero-content">
+      <div class="intro-text">
+        <h2>Bergabunglah bersama jutaan pengguna setiap hari</h2>
+        <p>Nikmati pengalaman perjalanan terbaik dengan JRR Commuter.<br>
+        Tepat waktu, aman, dan nyaman.</p>
+        <a href="rute.html" class="cta-button">Lihat Rute Kami</a>
+      </div>
+      <div class="slogan">
+        <h1>Melayani</h1>
+        <h2>Sepenuh</h2>
+        <h3>Hati</h3>
+      </div>
+    </div>
+  </div>
 
-  <!-- Footer -->
-  <div class="bottom-bar">
-    &copy; 2024 JRR | Ittoem Studio | Pembuat Web: maunghideung__
+  <div class="footer">
+    © 2024 JRR | Ittoem Studio | Pembuat Web: maunghideung__
   </div>
 
 </body>
