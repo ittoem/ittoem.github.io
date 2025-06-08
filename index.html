@@ -1,150 +1,132 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Railway Roblox</title>
-    <style>
-        /* Reset dasar */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Java Railway Roblox</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url('bgimg.png') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      position: relative;
+    }
 
-        body {
-            font-family: sans-serif;
-            background: url('bgimg.png') no-repeat center center;
-            background-size: cover;
-            min-height: 100vh;
-            position: relative;
-        }
+    @media (max-width: 768px) {
+      body {
+        background-position: right center;
+      }
+    }
 
-        @media (max-width: 768px) {
-            body {
-                background-position: right center;
-            }
-        }
+    .update-banner {
+      background-color: #fff3cd;
+      color: #856404;
+      padding: 1em;
+      text-align: center;
+      font-size: 0.95em;
+      font-weight: 500;
+      border-bottom: 2px solid #d39e00;
+    }
 
-        /* Peringatan update */
-        .update-banner {
-            background-color: #fff3cd;
-            color: #856404;
-            padding: 1em;
-            text-align: center;
-            font-size: 0.95em;
-            font-weight: 500;
-            border-bottom: 2px solid #d39e00;
-        }
+    .update-banner a {
+      font-weight: bold;
+      color: #4a3c00;
+      text-decoration: underline;
+    }
 
-        .update-banner a {
-            font-weight: bold;
-            color: #4a3c00;
-            text-decoration: underline;
-        }
+    .navbar {
+      background-color: #d10000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+    }
 
-        /* Navbar */
-        .navbar {
-            background-color: #d10000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1em 2em;
-        }
+    .navbar .logo img {
+      height: 40px;
+    }
 
-        .navbar .logo img {
-            height: 40px;
-        }
+    .navbar .nav-links {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
 
-        .navbar .nav-links {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
+    .navbar .nav-links a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-        .navbar .nav-links a {
-            color: rgba(255, 255, 255, 0.85);
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+    .navbar .nav-links a:hover {
+      color: white;
+    }
 
-        .navbar .nav-links a:hover {
-            color: white;
-        }
+    /* Tulisan di atas gambar */
+    .overlay-text {
+      position: absolute;
+      z-index: 10;
+      font-weight: bold;
+      color: red;
+    }
 
-        /* Slogan */
-        .hero-text {
-            text-align: center;
-            margin-top: 20vh;
-            color: #fff;
-        }
+    .text-melayani {
+      top: 30%;
+      right: 12%;
+      font-size: 2.5em;
+    }
 
-        .hero-text h1 {
-            font-size: 2.5em;
-        }
+    .text-hati {
+      top: 47%;
+      right: 6%;
+      font-size: 1.5em;
+    }
 
-        .hero-text span {
-            display: inline-block;
-            font-weight: bold;
-            font-size: 2.5em;
-        }
-
-        .hero-text .merah {
-            color: red;
-        }
-
-        .hero-text .hitam {
-            color: black;
-        }
-
-        /* Footer */
-        .bottom-bar {
-            background-color: #d10000;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-size: 0.9em;
-            font-weight: bold;
-        }
-    </style>
+    .bottom-bar {
+      background-color: #d10000;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Banner peringatan -->
-    <div class="update-banner">
-        ⚠️ Java Railway Roblox sedang mengalami pembaruan. Bergabunglah dengan komunitas kami di 
-        <a href="link.html">server Discord</a> untuk mengetahui perkembangannya.
-    </div>
+  <!-- Peringatan -->
+  <div class="update-banner">
+    ⚠️ Java Railway Roblox sedang mengalami pembaruan. Bergabunglah dengan komunitas kami di 
+    <a href="link.html">server Discord</a> untuk mengetahui perkembangannya.
+  </div>
 
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="logo">
-            <img src="jrrlogo.png" alt="Logo JRR">
-        </div>
-        <div class="nav-links">
-            <a href="sarana.html">Sarana</a>
-            <a href="link.html">Link</a>
-            <a href="#jadwal">Rute</a>
-        </div>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="jrrlogo.png" alt="Logo JRR">
     </div>
+    <div class="nav-links">
+      <a href="sarana.html">Sarana</a>
+      <a href="link.html">Link</a>
+      <a href="#jadwal">Rute</a>
+    </div>
+  </div>
 
-    <!-- Hero Section -->
-    <div class="hero-text">
-        <h1>
-            <span class="merah">Melayani</span> 
-            <span class="hitam">anda sepenuh hati</span>
-        </h1>
-    </div>
+  <!-- Tulisan sesuai posisi di gambar -->
+  <div class="overlay-text text-melayani">Melayani</div>
+  <div class="overlay-text text-hati">Hati</div>
 
-    <!-- Footer -->
-    <div class="bottom-bar">
-        &copy; 2024 JRR | Ittoem Studio | Pembuat Web: maunghideung__
-    </div>
+  <!-- Footer -->
+  <div class="bottom-bar">
+    &copy; 2024 JRR | Ittoem Studio | Pembuat Web: maunghideung__
+  </div>
 
 </body>
 </html>
