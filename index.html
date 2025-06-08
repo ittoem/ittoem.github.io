@@ -3,69 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JRR</title>
+    <title>Navbar dengan Logo dan Link di Tengah</title>
     <style>
         /* Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-image: url(bgimg.png);
+        }
+
+        /* Body background */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('bgimg.png');
+            background-size: cover;
             background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+
+        /* Peringatan */
+        .alert {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            padding: 1em;
+            text-align: center;
+            font-size: 0.95em;
+        }
+
+        .alert a {
+            color: #856404;
+            font-weight: bold;
+            text-decoration: underline;
         }
 
         /* Navbar */
         .navbar {
-            background-color: #d10000; /* Warna merah untuk navbar */
+            background-color: #d10000;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1em 2em;
+            flex-wrap: wrap;
         }
 
-        /* Style untuk logo gambar */
-        .navbar .logo img {
-            height: 40px; /* Sesuaikan ukuran logo */
+        .logo img {
+            height: 40px;
         }
 
-        /* Kontainer tautan di tengah */
-        .navbar .nav-links {
-            flex: 1;
+        .nav-links {
             display: flex;
             justify-content: center;
+            flex: 1;
+            gap: 2em;
         }
 
-        /* Style untuk link di navbar */
-        .navbar a {
-            color: rgba(255, 255, 255, 0.8);
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
-            margin-left: 90px;
-            margin-right: 90px;
             font-weight: bold;
             transition: color 0.3s;
         }
 
-        /* Hover effect untuk link */
-        .navbar a:hover {
-            color: white;
+        .nav-links a:hover {
+            color: #fff;
         }
 
-        /* Bottom bar */
-         .bottom-bar {
+        .bottom-bar {
             background-color: #d10000;
             color: white;
             text-align: center;
             padding: 1em;
             position: fixed;
-            left: 0; /* Memastikan posisi bottom bar melekat ke sisi kiri */
             bottom: 0;
+            left: 0;
             width: 100%;
             font-size: 0.9em;
             font-weight: bold;
-         }
+            z-index: 999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                padding: 1em;
+            }
+
+            .logo {
+                margin-bottom: 0.5em;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5em;
+                align-items: center;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
+
+    <!-- Peringatan Pembaruan -->
+    <div class="alert">
+        ⚠️ Java Railway Roblox sedang mengalami pembaruan. Bergabunglah dengan komunitas kami di 
+        <a href="link.html">server Discord</a> untuk mengetahui perkembangannya.
+    </div>
 
     <!-- Navbar -->
     <div class="navbar">
@@ -75,13 +122,13 @@
         <div class="nav-links">
             <a href="sarana.html">Sarana</a>
             <a href="link.html">Link</a>
-            <a href="rute.html">Rute</a>
+            <a href="#jadwal">Rute</a>
         </div>
     </div>
 
     <!-- Bottom bar -->
     <div class="bottom-bar">
-        &copy; 2024 JRR | Ittoem Studio | Pembuat Web: Maung
+        &copy; 2024 JRR | Ittoem Studio | Pembuat Web: maunghideung__
     </div>
 
 </body>
