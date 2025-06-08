@@ -1,135 +1,143 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar dengan Logo dan Link di Tengah</title>
-    <style>
-        /* Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JRR Web</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Body background */
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('bgimg.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            min-height: 100vh;
-            padding-bottom: 60px;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('bgimg.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 100vh;
+      padding-bottom: 70px; /* untuk bottom bar */
+    }
 
-        /* Peringatan */
-        .alert {
-            background-color: #fff3cd;
-            color: #856404;
-            border: 1px solid #ffeeba;
-            padding: 1em;
-            text-align: center;
-            font-size: 0.95em;
-        }
+    /* Peringatan */
+    .alert {
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+      padding: 0.8em;
+      text-align: center;
+      font-size: 0.9em;
+    }
 
-        .alert a {
-            color: #856404;
-            font-weight: bold;
-            text-decoration: underline;
-        }
+    .alert a {
+      font-weight: bold;
+      color: #856404;
+      text-decoration: underline;
+    }
 
-        /* Navbar */
-        .navbar {
-            background-color: #d10000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1em 2em;
-            flex-wrap: wrap;
-        }
+    /* Navbar */
+    .navbar {
+      background-color: #d10000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8em 1.2em;
+      flex-wrap: wrap;
+    }
 
-        .logo img {
-            height: 40px;
-        }
+    .logo img {
+      height: 35px;
+    }
 
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            flex: 1;
-            gap: 2em;
-        }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex: 1;
+      gap: 1.5em;
+    }
 
-        .nav-links a {
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95em;
+      transition: color 0.3s;
+    }
 
-        .nav-links a:hover {
-            color: #fff;
-        }
+    .nav-links a:hover {
+      color: white;
+    }
 
-        .bottom-bar {
-            background-color: #d10000;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            font-size: 0.9em;
-            font-weight: bold;
-            z-index: 999;
-        }
+    /* Bottom Bar */
+    .bottom-bar {
+      background-color: #d10000;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 0.85em;
+      font-weight: bold;
+      z-index: 999;
+    }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: center;
-                padding: 1em;
-            }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+      }
 
-            .logo {
-                margin-bottom: 0.5em;
-            }
+      .nav-links {
+        flex-direction: column;
+        gap: 0.6em;
+        margin-top: 0.6em;
+      }
 
-            .nav-links {
-                flex-direction: column;
-                gap: 0.5em;
-                align-items: center;
-                width: 100%;
-            }
-        }
-    </style>
+      .nav-links a {
+        font-size: 1em;
+      }
+
+      .logo {
+        margin-bottom: 0.4em;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Peringatan Pembaruan -->
-    <div class="alert">
-        ⚠️ Java Railway Roblox sedang mengalami pembaruan. Bergabunglah dengan komunitas kami di 
-        <a href="link.html">server Discord</a> untuk mengetahui perkembangannya.
-    </div>
+  <!-- Peringatan -->
+  <div class="alert">
+    ⚠️ Java Railway Roblox sedang mengalami pembaruan. Bergabunglah dengan komunitas kami di 
+    <a href="link.html">server Discord</a> untuk mengetahui perkembangannya.
+  </div>
 
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="logo">
-            <img src="jrr/jrrlogo.png" alt="Logo JRR">
-        </div>
-        <div class="nav-links">
-            <a href="sarana.html">Sarana</a>
-            <a href="link.html">Link</a>
-            <a href="#jadwal">Rute</a>
-        </div>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="jrr/jrrlogo.png" alt="Logo JRR" />
     </div>
+    <div class="nav-links">
+      <a href="sarana.html">Sarana</a>
+      <a href="link.html">Link</a>
+      <a href="#jadwal">Rute</a>
+    </div>
+  </div>
 
-    <!-- Bottom bar -->
-    <div class="bottom-bar">
-        &copy; 2024 JRR | Ittoem Studio | Pembuat Web: maunghideung__
-    </div>
+  <!-- Konten -->
+  <div style="padding: 1.5em; color: white;">
+    <h2>Selamat Datang di JRR</h2>
+    <p>Informasi dan update terbaru akan tersedia di sini.</p>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="bottom-bar">
+    &copy; 2024 JRR | Ittoem Studio | Pembuat Web: maunghideung__
+  </div>
 
 </body>
 </html>
